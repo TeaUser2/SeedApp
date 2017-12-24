@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.MenuItem;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -15,6 +14,7 @@ import android.widget.TextView;
 import android.view.View;
 import android.content.Intent;
 import android.app.Activity;
+import android.widget.Toast;
 
 import com.example.tea.seedapp.Web.GetDataAsync;
 
@@ -22,7 +22,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.lang.reflect.Array;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -82,8 +82,13 @@ public class Search extends AppCompatActivity implements GetDataAsync.DataListen
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
-        new GetDataAsync(this).execute("https://jsonplaceholder.typicode.com/posts");
-    }
+        if(!isNetworkAvailable()) {
+            ShowToast();
+        }
+        else {
+            new GetDataAsync(this).execute("https://jsonplaceholder.typicode.com/posts");
+        }
+        }
 
     private boolean isNetworkAvailable() {
         ConnectivityManager connectivityManager
@@ -91,6 +96,11 @@ public class Search extends AppCompatActivity implements GetDataAsync.DataListen
         NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
         return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
+
+    private void ShowToast() {
+        Toast.makeText(this, "No network connection", Toast.LENGTH_LONG).show();
+    }
+
 
     @Override
     public void dataReceived(JSONArray data) {
