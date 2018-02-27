@@ -5,19 +5,13 @@
 
     <ImageView
         android:id="@+id/IVplant"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/ic_launcher"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_gravity="top"
         android:layout_margin="@dimen/itemMargin"
-        />
+        android:src="@drawable/tomato_item"
 
-    <TextView
-        android:id="@+id/TVplant"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/itemMargin"
-        android:text="@string/display_data" />
+        />
 
 
 </LinearLayout>

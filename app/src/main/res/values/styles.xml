@@ -21,6 +21,6 @@
     </style>
 
     <style name="AppTheme.Launcher">
-          <item name="android:windowBackground">@drawable/d</item>
+          <!--<item name="android:windowBackground">@drawable/</item>-->
     </style>
 </resources>

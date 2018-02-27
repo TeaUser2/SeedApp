@@ -1,18 +1,27 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     android:background="#FFFFFF"
-    android:padding="30dp"
+
+    android:gravity="center"
+    android:padding="5dp"
     tools:context="com.example.tea.seedapp.IntroActivity">
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/d"
 
-        />
+        android:layout_marginBottom="50dp"
+        android:adjustViewBounds="true"
+        android:maxHeight="150dp"
+        android:maxWidth="150dp"
+        app:srcCompat="@drawable/logo" />
 
-</LinearLayout>
+
+
+
+</RelativeLayout>

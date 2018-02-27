@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -37,7 +38,7 @@ public class CostumAdapter extends ArrayAdapter<DataItem> {
     }
     static class DataHolder{
         ImageView IVPlant;
-        TextView TVPlant;
+
 
     }
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
@@ -47,8 +48,8 @@ public class CostumAdapter extends ArrayAdapter<DataItem> {
             LayoutInflater inflater = ((Activity)context).getLayoutInflater();
             convertView=inflater.inflate(layoutResourceId,null);
             holder=new DataHolder();
-            holder.IVPlant=(ImageView)convertView.findViewById(R.id.IVplant);
-            holder.TVPlant=(TextView)convertView.findViewById(R.id.TVplant);
+            holder.IVPlant=(ImageView) convertView.findViewById(R.id.IVplant);
+
 
             convertView.setTag(holder);
         }
@@ -57,7 +58,7 @@ public class CostumAdapter extends ArrayAdapter<DataItem> {
         }
 
         DataItem dataItem=data.get(position);
-        holder.TVPlant.setText(dataItem.plantTxt);
+
         holder.IVPlant.setImageResource(dataItem.idItem);
 
         return convertView;

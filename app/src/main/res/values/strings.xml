@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">Vrtickarji</string>
+    <string name="app_name">Vrtičkarji</string>
     <string name="title_home">home</string>
-    <string name="title_dis">Izberite zelenjavo ali sadje, ki želite posaditi</string>
+    <string name="title_dis">Izberite zelenjavo, ki želite posaditi</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
 
@@ -10,4 +10,5 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="display_info">Prikaži</string>
     <string name="display_data">text</string>
+    <string name="splash_screen_txt">Vrtičkarji</string>
 </resources>

@@ -16,22 +16,26 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:gravity="center"
-        android:text="@string/title_dis" />
+        android:text="@string/title_dis"
+        android:textSize="19sp"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/darkGrey"
+        />
 
-    <ListView
-        android:id="@+id/listView"
-        android:layout_width="match_parent"
+
+    <GridView
+        android:id="@+id/grid_in_search"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_search" />
+        android:layout_below="@id/tv_search"
+        android:numColumns="3"
+
+        android:layout_marginTop="20dp"
+        >
+
+    </GridView>
 
 
-    <android.support.design.widget.BottomNavigationView
-        android:id="@+id/navigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_gravity="bottom"
-        android:background="?android:attr/windowBackground"
-        app:menu="@menu/navigation" />
+
 
 </RelativeLayout>

@@ -9,6 +9,7 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.AdapterView;
+import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.view.View;
@@ -60,9 +61,16 @@ public class Search extends AppCompatActivity implements GetDataAsync.DataListen
         setContentView(R.layout.activity_search);
 
         lstData = new ArrayList<>();
-        lstData.add(new DataItem(R.drawable.tomato_item,"TEA in DRAGAN"));
+        lstData.add(new DataItem(R.drawable.tomato_item,"Paradižnik"));
+        lstData.add(new DataItem(R.drawable.carrot_item,"Korenček"));
+        lstData.add(new DataItem(R.drawable.corn_item,"Koruza"));
+        lstData.add(new DataItem(R.drawable.leek_item,"Por"));
+        lstData.add(new DataItem(R.drawable.salad_item,"Solata"));
+        lstData.add(new DataItem(R.drawable.eggplant_item,"Jajčevec"));
+        lstData.add(new DataItem(R.drawable.peas_item,"Fižol"));
+        lstData.add(new DataItem(R.drawable.potato_item,"Krompir"));
 
-        ListView listView=(ListView)findViewById(R.id.listView);
+        GridView listView=(GridView)findViewById(R.id.grid_in_search);
         adapter= new CostumAdapter(this,R.layout.itemrow,lstData);
         listView.setAdapter(adapter);
 
@@ -79,8 +87,8 @@ public class Search extends AppCompatActivity implements GetDataAsync.DataListen
         });
 
         mTextMessage = (TextView) findViewById(R.id.TVplant);
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+
 
         if(!isNetworkAvailable()) {
             ShowToast();
@@ -98,7 +106,7 @@ public class Search extends AppCompatActivity implements GetDataAsync.DataListen
     }
 
     private void ShowToast() {
-        Toast.makeText(this, "No network connection", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Ni internetne povezave", Toast.LENGTH_LONG).show();
     }
 
 
