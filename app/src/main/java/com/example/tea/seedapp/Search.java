@@ -86,7 +86,7 @@ public class Search extends AppCompatActivity implements GetDataAsync.DataListen
             }
         });
 
-        mTextMessage = (TextView) findViewById(R.id.TVplant);
+        // mTextMessage = (TextView) findViewById(R.id.TVplant);
 
 
 
@@ -94,7 +94,7 @@ public class Search extends AppCompatActivity implements GetDataAsync.DataListen
             ShowToast();
         }
         else {
-            new GetDataAsync(this).execute("https://jsonplaceholder.typicode.com/posts");
+//            new GetDataAsync(this).execute("https://jsonplaceholder.typicode.com/posts");
         }
         }
 

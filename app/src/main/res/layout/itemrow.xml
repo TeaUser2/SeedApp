@@ -3,13 +3,17 @@
     android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
+    <ImageButton
         android:id="@+id/IVplant"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_gravity="top"
         android:layout_margin="@dimen/itemMargin"
         android:src="@drawable/tomato_item"
+        android:background="@drawable/button_selector"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:padding="10dp"
 
         />
 
